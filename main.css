@@ -1,0 +1,101 @@
+body{
+    background-color: black;
+    color: white;
+}
+/* main class is the default class of main div */
+.main{
+    margin: 0 auto;
+    margin-top: 3%;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10%;
+    width: 500px;
+    height:500px;
+    font-weight: bold;
+    font-size:x-large;
+    box-shadow: 2px 2px 20px 10px white;
+}
+/* mainLight class is toggled version of main for light/dark mode toggle */
+.mainLight{
+    margin: 0 auto;
+    margin-top: 3%;
+    background-color:pink;
+    border: 2px solid white;
+    border-radius: 10%;
+    width: 500px;
+    height:500px;
+    font-weight: bold;
+    font-size:x-large;
+}
+.reduceWidth {
+    border-radius: 25%;
+    font-size: small;
+    font-weight: bold;
+    width: 30px;
+    cursor: default;
+}
+.textCenter{
+    text-align: center;
+}
+/* provide additional independent scroll bar to alarm list */
+.scrollDiv{
+    max-height: 260px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+/* hides scroll bar */
+.scrollDiv::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.lineThrough{
+    text-decoration: line-through;
+    font-weight: bold;
+    color: red;
+    opacity: 50%;
+}
+#toggle{
+    background-color: black;
+    position: sticky;
+    margin-bottom: 10%;
+
+}
+#alrmList{
+    width: 500px;
+}
+.mrl{
+    margin-left:40px;
+}
+.bWhite{
+    border:1px solid white;
+}
+.bBlack{
+    border:1px solid black;
+}
+/* media query for very small devices */
+/* changed width & height incase of small devices */
+@media only screen and (max-width:500px) {
+    .main{
+        margin: 0 auto;
+        margin-top: 3%;
+        background-color: black;
+        border: 2px solid white;
+        border-radius: 10%;
+        width: 250px;
+        height:600px;
+        font-weight: bold;
+        font-size:x-large;
+        box-shadow: 2px 2px 20px 10px white;
+    }
+    .mainLight{
+        margin: 0 auto;
+        margin-top: 3%;
+        background-color:pink;
+        border: 2px solid white;
+        border-radius: 10%;
+        width: 250px;
+        height:600px;
+        font-weight: bold;
+        font-size:x-large;
+    }
+}
