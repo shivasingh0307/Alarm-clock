@@ -1,1 +1,56 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <!-- CSS files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- local css files -->
+    <link rel="stylesheet" href="./includes/main.css">
+</head>
+<body>
+    <div class="container main" id="main">
+        <div class="row">
+            <div class="col-12 mt-3 text-center" id="time_div">
+                <!-- display real-time timer here -->
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-1"></div>
+            <div class="col-8 bWhite text-center p-2" id="setAlarmBox">
+                <!-- input for time in hh:mm:ss format(12hrs) -->
+                <input type="number" class="reduceWidth"  maxlength="1" min="0" max="1" required value="0" id="hrZero" onKeyDown="return false" onchange="checkValue()">
+                <input type="number" class="reduceWidth"  maxlength="1" min="0" max="9" required value="1" id="hrOne" onKeyDown="return false">
+                <span>:</span>
+                <input type="number" class="reduceWidth"  maxlength="1" min="0" max="5" required value="0" id="minZero" onKeyDown="return false">
+                <input type="number" class="reduceWidth"  maxlength="1" min="0" max="9" required value="0" id="minOne" onKeyDown="return false">
+                <span>:</span>
+                <input type="number" class="reduceWidth"  maxlength="1" min="0" max="5" required value="0" id="ssZero" onKeyDown="return false">
+                <input type="number" class="reduceWidth"  maxlength="1" min="0" max="9" required value="0" id="ssOne" onKeyDown="return false">
+               
+                <select id="session" class="reduceWidth" style="width:48px;height: 30px;">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+            <div class="col-3 text-center p-2">
+                <button class="btn btn-success btn-sm" onclick="setAlarm()">Set Alarm</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <h2 class="text-light-50 text-decoration-underline mrl">Alarms</h2>
+            <div id="alrmList" class="container-fluid scrollDiv">
+                <!-- Alarm list will update here -->
+            </div>
+        </div>
+    </div>
+    <button onclick="toggle()" id="toggle"><h1 class="text-light text-bg-dark"><i id="icon" class="bi bi-toggle-on"></i></h1></button>
+    <!-- JavaScript files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./includes/main.js"></script>
+</body>
+</html>
